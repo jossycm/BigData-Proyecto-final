@@ -4,7 +4,7 @@
 		"description": "ingesta de input hacia capa bronce",
 		"activities": [
 			{
-				"name": "Get Metadata1",
+				"name": "Obtener_metadata_input",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
