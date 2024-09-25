@@ -1,0 +1,9 @@
+{
+	"name": "josselinecerpacertus",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5e591f6d-bdeb-4f78-bdbd-8032126136ad",
+		"tenantId": "a8640d30-c61f-4a95-b221-02db86030768"
+	}
+}
