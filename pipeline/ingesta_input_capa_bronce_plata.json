@@ -4,7 +4,7 @@
 		"description": "Ingesta de archivos desde la capa bronce  hacia la capa plata.",
 		"activities": [
 			{
-				"name": "Notebook1",
+				"name": "Bronce_a_plata",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -14,7 +14,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/josscerma@hotmail.com/Ingesta_capa_bronce_plata"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks_DataFactory",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
