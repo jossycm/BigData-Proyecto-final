@@ -26,7 +26,7 @@
 					{
 						"activity": "Ingesta_input_capa_bronce",
 						"dependencyConditions": [
-							"Completed"
+							"Succeeded"
 						]
 					}
 				],
@@ -49,7 +49,7 @@
 					{
 						"activity": "Ingesta_input_capa_bronce_plata",
 						"dependencyConditions": [
-							"Completed"
+							"Succeeded"
 						]
 					}
 				],
