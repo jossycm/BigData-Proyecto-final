@@ -4,7 +4,7 @@
 		"description": "se ejecutaran todas las capas",
 		"activities": [
 			{
-				"name": "Execute Pipeline1",
+				"name": "Ingesta_input_capa_bronce",
 				"type": "ExecutePipeline",
 				"dependsOn": [],
 				"policy": {
@@ -12,15 +12,19 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ingesta_input_capa_bronce",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			},
 			{
-				"name": "Execute Pipeline2",
+				"name": "Ingesta_input_capa_bronce_plata",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Execute Pipeline1",
+						"activity": "Ingesta_input_capa_bronce",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -31,15 +35,19 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ingesta_input_capa_bronce_plata",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			},
 			{
-				"name": "Execute Pipeline3",
+				"name": "Ingesta_input_capa_plata_oro",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Execute Pipeline2",
+						"activity": "Ingesta_input_capa_bronce_plata",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -50,6 +58,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ingesta_input_capa_plata_oro",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			}
